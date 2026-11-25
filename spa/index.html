@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lụa Spa — Chăm sóc da & thư giãn</title>
+  <meta name="description" content="Lụa Spa: chăm sóc da mặt, massage thư giãn, gội đầu dưỡng sinh. Đặt lịch nhanh qua Zalo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/base.css">
+  <style>
+    :root {
+      --bg: #f6f1ea; --surface: #fffdf9; --ink: #2a2622; --muted: #756c62; --line: #e4d9cb;
+      --accent: #5b7a64; --accent-ink: #fff; --accent-soft: #e4ebe2; --clay: #c9a27e;
+    }
+    h1 em, h2 em { font-style: italic; color: var(--accent); }
+    .hero { padding-block: clamp(40px, 7vw, 96px) var(--section); }
+    .hero .wrap { display: grid; gap: clamp(32px, 5vw, 64px); align-items: center; grid-template-columns: 1.1fr 0.9fr; }
+    .hero-art { position: relative; aspect-ratio: 4 / 5; }
+    .arch {
+      position: absolute; inset: 0 8% 0 0; border-radius: 999px 999px var(--radius-lg) var(--radius-lg);
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,.55), transparent 40%),
+        linear-gradient(160deg, #b9c9b3 0%, #7f9b85 55%, #5b7a64 100%);
+      box-shadow: var(--shadow);
+    }
+    .arch::after {
+      content: ""; position: absolute; inset: 14px; border-radius: inherit; border: 1px solid rgba(255,255,255,.45);
+    }
+    .sun { position: absolute; width: 38%; aspect-ratio: 1; right: 0; top: 10%; border-radius: 50%; background: var(--clay); mix-blend-mode: multiply; opacity: .85; }
+    .chip {
+      position: absolute; left: -6%; bottom: 12%; background: var(--surface); border: 1px solid var(--line);
+      border-radius: 18px; padding: 14px 18px; box-shadow: var(--shadow); font-size: .9rem;
+    }
+    .chip strong { display: block; font-family: var(--font-display); font-size: 1.4rem; color: var(--accent); }
+    .stats { display: flex; gap: 32px; margin-top: 36px; flex-wrap: wrap; }
+    .stats b { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 500; }
+    .stats span { font-size: .85rem; color: var(--muted); }
+    .services { background: var(--surface); border-block: 1px solid var(--line); }
+    .services .wrap { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(32px, 6vw, 80px); }
+    .why { grid-template-columns: repeat(3, 1fr); }
+    .why .card { background: transparent; }
+    .why .num { font-family: var(--font-display); font-style: italic; color: var(--clay); font-size: 2.2rem; line-height: 1; }
+    .quotes { grid-template-columns: 1.3fr 1fr; align-items: stretch; }
+    .quotes .card:first-child { background: var(--accent); color: #fff; border: 0; }
+    .quotes .card:first-child footer { color: rgba(255,255,255,.75); }
+    .booking .wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+    .info-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; }
+    .info-list b { display: block; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    @media (max-width: 860px) {
+      .hero .wrap, .services .wrap, .booking .wrap, .quotes { grid-template-columns: 1fr; }
+      .why { grid-template-columns: 1fr; }
+      .hero-art { max-width: 380px; width: 100%; margin-inline: auto; }
+      .chip { left: 0; }
+    }
+  </style>
+</head>
+<body data-phone="0946611993" data-business="Lụa Spa">
+  <a class="skip" href="#main">Bỏ qua tới nội dung</a>
+  <div class="demo-ribbon">Đây là website mẫu — <a href="../">xem các mẫu khác & bảng giá</a></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#">Lụa Spa</a>
+      <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>☰</button>
+      <nav class="nav" data-nav aria-label="Menu chính">
+        <a href="#dich-vu">Dịch vụ</a>
+        <a href="#vi-sao">Vì sao chọn Lụa</a>
+        <a href="#danh-gia">Khách nói gì</a>
+        <a class="btn btn-primary" href="#dat-lich">Đặt lịch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">Spa · Quận 3, TP.HCM</span>
+          <h1>Một giờ <em>chậm lại</em> cho làn da và tâm trí.</h1>
+          <p class="lead">Chăm sóc da mặt chuyên sâu, massage đá nóng và gội đầu dưỡng sinh — dùng sản phẩm thiên nhiên, phòng riêng yên tĩnh.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#dat-lich">Đặt lịch hôm nay</a>
+            <a class="btn btn-ghost" href="#dich-vu">Xem bảng giá</a>
+          </div>
+          <div class="stats">
+            <div><b>4.9★</b><span>320+ đánh giá Google</span></div>
+            <div><b>8 năm</b><span>kinh nghiệm</span></div>
+            <div><b>9–21h</b><span>mở cửa mỗi ngày</span></div>
+          </div>
+        </div>
+        <div class="hero-art reveal" aria-hidden="true">
+          <div class="arch"></div>
+          <div class="sun"></div>
+          <div class="chip"><strong>-20%</strong>cho khách lần đầu</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="dich-vu">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Dịch vụ</span>
+          <h2>Liệu trình <em>được yêu thích</em></h2>
+          <p class="muted">Giá đã gồm trà thảo mộc và khăn nóng. Liệu trình 10 buổi giảm thêm 15%.</p>
+        </div>
+        <ul class="price-list reveal">
+          <li><span class="name">Chăm sóc da mặt cơ bản<small>Làm sạch sâu · đắp mặt nạ · 60 phút</small></span><span class="dots"></span><span class="price">350.000đ</span></li>
+          <li><span class="name">Trị mụn chuẩn y khoa<small>Lấy nhân mụn · điện di · 75 phút</small></span><span class="dots"></span><span class="price">450.000đ</span></li>
+          <li><span class="name">Massage đá nóng toàn thân<small>Tinh dầu sả chanh · 90 phút</small></span><span class="dots"></span><span class="price">520.000đ</span></li>
+          <li><span class="name">Gội đầu dưỡng sinh<small>Bấm huyệt cổ vai gáy · 45 phút</small></span><span class="dots"></span><span class="price">180.000đ</span></li>
+          <li><span class="name">Combo thư giãn trọn vẹn<small>Da mặt + massage + gội · 150 phút</small></span><span class="dots"></span><span class="price">890.000đ</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="vi-sao">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Vì sao chọn Lụa</span>
+          <h2>Nhỏ, riêng tư và <em>tận tâm</em></h2>
+        </div>
+        <div class="grid why">
+          <article class="card reveal"><div class="num">01</div><h3>Phòng riêng từng khách</h3><p class="muted">Không giường chung, không ồn ào. Bạn được thư giãn thật sự.</p></article>
+          <article class="card reveal"><div class="num">02</div><h3>Kỹ thuật viên có chứng chỉ</h3><p class="muted">Đội ngũ đào tạo bài bản, soi da miễn phí trước mỗi liệu trình.</p></article>
+          <article class="card reveal"><div class="num">03</div><h3>Sản phẩm rõ nguồn gốc</h3><p class="muted">Mỹ phẩm thiên nhiên, có hóa đơn, phù hợp cả da nhạy cảm.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="danh-gia" style="padding-top:0">
+      <div class="wrap grid quotes">
+        <blockquote class="card quote reveal"><p>“Lần đầu đi spa mà ngủ quên luôn. Da sáng hẳn sau 3 buổi, các bạn tư vấn rất kỹ, không hề ép mua thêm.”</p><footer>Chị Hạnh · khách quen 2 năm</footer></blockquote>
+        <blockquote class="card quote reveal"><p>“Gội đầu dưỡng sinh ở đây là số một, hết hẳn đau vai gáy.”</p><footer>Anh Minh · nhân viên văn phòng</footer></blockquote>
+      </div>
+    </section>
+
+    <section class="section booking services" id="dat-lich">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">Đặt lịch</span>
+          <h2>Giữ chỗ trong <em>30 giây</em></h2>
+          <p class="muted">Điền thông tin, nội dung sẽ được gửi qua Zalo. Lụa xác nhận lại trong vòng 15 phút.</p>
+          <ul class="info-list">
+            <li><b>Địa chỉ</b>123 Võ Văn Tần, Phường 6, Quận 3</li>
+            <li><b>Giờ mở cửa</b>9:00 – 21:00, tất cả các ngày</li>
+            <li><b>Hotline</b><a href="#" data-call>0946 611 993</a></li>
+          </ul>
+        </div>
+        <form class="form card reveal" data-booking novalidate>
+          <div class="form-row">
+            <div class="field"><label for="name">Họ tên</label><input id="name" name="name" data-label="Họ tên" autocomplete="name" required></div>
+            <div class="field"><label for="phone">Số điện thoại</label><input id="phone" name="phone" data-label="SĐT" inputmode="tel" autocomplete="tel" required></div>
+          </div>
+          <div class="field"><label for="service">Dịch vụ</label>
+            <select id="service" name="service" data-label="Dịch vụ">
+              <option>Chăm sóc da mặt cơ bản</option><option>Trị mụn chuẩn y khoa</option><option>Massage đá nóng toàn thân</option><option>Gội đầu dưỡng sinh</option><option>Combo thư giãn trọn vẹn</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="date">Ngày</label><input id="date" name="date" data-label="Ngày" type="date"></div>
+            <div class="field"><label for="time">Giờ</label><input id="time" name="time" data-label="Giờ" type="time" min="09:00" max="20:00"></div>
+          </div>
+          <div class="field"><label for="note">Ghi chú</label><textarea id="note" name="note" data-label="Ghi chú" rows="3" placeholder="Da nhạy cảm, muốn kỹ thuật viên nữ…"></textarea></div>
+          <button class="btn btn-primary" type="submit">Gửi đặt lịch qua Zalo</button>
+          <p class="form-status" data-status role="status" aria-live="polite"></p>
+          <pre class="form-fallback" data-fallback hidden></pre>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div><strong>Lụa Spa</strong><br>123 Võ Văn Tần, Quận 3, TP.HCM</div>
+      <div>© <span data-year></span> Lụa Spa. Website mẫu.</div>
+    </div>
+  </footer>
+
+  <div class="contact-bar"><a href="#" data-call>Gọi ngay</a><a href="#" data-zalo>Chat Zalo</a></div>
+  <script src="../assets/main.js" defer></script>
+</body>
+</html>

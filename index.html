@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website cho tiệm của bạn — xong trong 7 ngày</title>
+  <meta name="description" content="Nhận làm website cho spa, quán ăn, phòng khám: chuẩn điện thoại, đặt lịch qua Zalo, giá trọn gói từ 2,5 triệu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="assets/base.css">
+  <style>
+    :root {
+      --bg: #f5f3ee; --surface: #fff; --ink: #16151a; --muted: #66636d; --line: #e3e0d8;
+      --accent: #3a3aff; --accent-ink: #fff; --accent-soft: #e6e6ff; --lime: #d4f25c;
+      --font-display: "Be Vietnam Pro", system-ui, sans-serif;
+    }
+    h1, h2 { font-weight: 800; letter-spacing: -0.04em; }
+    .it { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 500; letter-spacing: -0.01em; }
+    .hl { background: var(--lime); padding: 0 .12em; border-radius: 6px; }
+    .hero { padding-block: clamp(48px, 9vw, 120px) clamp(32px, 5vw, 64px); }
+    .hero h1 { font-size: clamp(2.6rem, 1rem + 6.5vw, 6.2rem); max-width: 14ch; }
+    .hero .lead { max-width: 46ch; }
+    .demos { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .t-pho { background: #1c1712; color: #f6efe4; }
+    .t-pho::after { content: "EN · VI"; position: absolute; right: 16px; top: 16px; background: #e9a23b; color: #1c1712; border-radius: 999px; padding: 6px 12px; font-weight: 800; font-size: .8rem; }
+    .demo { display: block; text-decoration: none; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); transition: transform .35s var(--ease), box-shadow .35s; }
+    .demo:hover { transform: translateY(-6px) rotate(-.4deg); box-shadow: 0 30px 50px -30px rgba(22,21,26,.5); }
+    .demo:focus-visible { outline-offset: 4px; }
+    .thumb { aspect-ratio: 4 / 3; padding: 18px; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; position: relative; }
+    .thumb b { font-size: 1.6rem; line-height: 1.05; letter-spacing: -0.02em; }
+    .thumb i { width: 46%; height: 8px; border-radius: 4px; background: currentColor; opacity: .25; }
+    .t-spa { background: linear-gradient(160deg, #e9efe5, #9fb7a4); color: #2a2622; font-family: "Playfair Display", serif; }
+    .t-spa::after { content: ""; position: absolute; width: 34%; aspect-ratio: 1; border-radius: 50%; right: 18px; top: 18px; background: #c9a27e; opacity: .85; }
+    .t-food { background: #b5482a; color: #fff8f0; text-transform: uppercase; }
+    .t-food b { font-weight: 900; }
+    .t-food::after { content: "45K"; position: absolute; right: 16px; top: 16px; width: 64px; height: 64px; border-radius: 50%; background: #e0a83a; color: #2b1d14; display: grid; place-items: center; font-weight: 900; transform: rotate(-12deg); }
+    .t-dental { background: radial-gradient(ellipse at 80% 10%, #bfe3f0, #f4f8f8 60%); color: #0f2a2e; }
+    .t-dental::after { content: "14:00"; position: absolute; right: 16px; top: 16px; border: 1.5px solid #0e7c7b; color: #0e7c7b; background: #dcefee; border-radius: 10px; padding: 6px 10px; font-weight: 700; font-size: .85rem; }
+    .demo-meta { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; font-weight: 600; }
+    .demo-meta span:last-child { color: var(--accent); }
+    .plans { grid-template-columns: repeat(4, 1fr); align-items: stretch; }
+    .plan { display: flex; flex-direction: column; gap: 10px; }
+    .plan .price { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.03em; }
+    .plan .price small { font-size: .9rem; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+    .plan ul { margin: 0; padding-left: 1.1em; color: var(--muted); font-size: .95rem; flex: 1; }
+    .plan.featured { background: var(--ink); color: #f5f3ee; border-color: var(--ink); transform: translateY(-10px); }
+    .plan.featured ul { color: #c9c6cf; }
+    .plan.featured .badge { align-self: flex-start; background: var(--lime); color: var(--ink); font-size: .75rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .06em; }
+    .process { grid-template-columns: repeat(4, 1fr); }
+    .process .day { font-weight: 800; color: var(--accent); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
+    .faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+    .faq summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; }
+    .faq p { margin: 10px 0 0; color: var(--muted); }
+    .cta { background: var(--accent); color: #fff; border-radius: 32px; padding: clamp(32px, 6vw, 72px); display: grid; grid-template-columns: 1.3fr auto; gap: 24px; align-items: center; }
+    .cta .btn-primary { background: var(--lime); color: var(--ink); box-shadow: none; }
+    .cta .btn-ghost { color: #fff; }
+    .cta .btn-ghost:hover { background: rgba(255,255,255,.12); }
+    @media (max-width: 960px) { .plans, .process { grid-template-columns: repeat(2, 1fr); } .plan.featured { transform: none; } }
+    @media (max-width: 760px) { .demos, .cta { grid-template-columns: 1fr; } }
+    @media (max-width: 520px) { .plans, .process { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-phone="0946611993" data-business="Web cho tiệm">
+  <a class="skip" href="#main">Bỏ qua tới nội dung</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#">Web cho tiệm<span style="color:var(--accent)">.</span></a>
+      <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" data-nav-toggle>☰</button>
+      <nav class="nav" data-nav aria-label="Menu chính">
+        <a href="#mau">Mẫu web</a>
+        <a href="#bang-gia">Bảng giá</a>
+        <a href="#quy-trinh">Quy trình</a>
+        <a class="btn btn-primary" href="#" data-zalo>Nhắn Zalo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap reveal">
+        <span class="eyebrow">Spa · Quán ăn · Phòng khám · Cửa hàng</span>
+        <h1>Website cho tiệm của bạn, <span class="hl">xong trong 7 ngày.</span></h1>
+        <p class="lead">Khách tìm thấy bạn trên Google, xem bảng giá trên điện thoại, đặt lịch qua Zalo chỉ với một chạm. Trọn gói, báo giá trước, không phát sinh.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#mau">Xem mẫu web</a>
+          <a class="btn btn-ghost" href="#bang-gia">Xem bảng giá</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mau" style="padding-top:0">
+      <div class="wrap">
+        <div class="grid demos">
+          <a class="demo reveal" href="spa/"><div class="thumb t-spa"><b>Một giờ<br>chậm lại.</b><i></i></div><div class="demo-meta"><span>Spa & thẩm mỹ</span><span>Xem mẫu →</span></div></a>
+          <a class="demo reveal" href="quan-an/"><div class="thumb t-food"><b>Cơm nóng,<br>canh ngọt.</b><i></i></div><div class="demo-meta"><span>Quán ăn & cafe</span><span>Xem mẫu →</span></div></a>
+          <a class="demo reveal" href="nha-khoa/"><div class="thumb t-dental"><b>Khám răng<br>nhẹ nhàng.</b><i></i></div><div class="demo-meta"><span>Phòng khám</span><span>Xem mẫu →</span></div></a>
+          <a class="demo reveal" href="pho-song-ngu/"><div class="thumb t-pho"><b>Broth simmered<br>18 hours.</b><i></i></div><div class="demo-meta"><span>Nước ngoài · song ngữ</span><span>Xem mẫu →</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bang-gia">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Bảng giá trọn gói</span>
+          <h2>Giá rõ ràng, <span class="it">trả 2 lần</span></h2>
+          <p class="muted">Cọc 50% khi bắt đầu, 50% khi bạn hài lòng và nhận bàn giao. Tên miền (.com/.vn) khoảng 300–800 nghìn/năm, đăng ký đứng tên chủ tiệm.</p>
+          <p class="muted"><b>Tiệm người Việt ở nước ngoài:</b> web song ngữ (tiếng Anh/Đức/Séc… + tiếng Việt) từ <b>$350 / €330</b>, gói đặt bàn song ngữ <b>$600 / €550</b>, chăm sóc $40/tháng. Trao đổi bằng tiếng Việt, thanh toán 50/50 qua PayPal hoặc Wise.</p>
+        </div>
+        <div class="grid plans">
+          <article class="card plan reveal"><h3>Landing page</h3><div class="price">2,5tr</div><ul><li>1 trang, chuẩn điện thoại</li><li>Nút gọi + Zalo nổi</li><li>Bản đồ Google</li><li>Xong trong 3 ngày</li></ul></article>
+          <article class="card plan featured reveal"><span class="badge">Chọn nhiều nhất</span><h3>Web đặt lịch</h3><div class="price">6,5tr</div><ul><li>Như mẫu ở trên</li><li>Bảng giá, dịch vụ, đánh giá</li><li>Form đặt lịch gửi Zalo</li><li>SEO Google cơ bản</li><li>Xong trong 7 ngày</li></ul></article>
+          <article class="card plan reveal"><h3>Web nâng cao</h3><div class="price">12tr+</div><ul><li>Nhiều trang, tin tức/blog</li><li>Tự sửa nội dung không cần code</li><li>Thông báo đơn qua Telegram</li><li>Xong trong 2 tuần</li></ul></article>
+          <article class="card plan reveal"><h3>Chăm sóc web</h3><div class="price">400k<small>/tháng</small></div><ul><li>Đổi giá, ảnh, khuyến mãi</li><li>Giữ web luôn chạy</li><li>Báo cáo lượt xem hằng tháng</li><li>Hủy bất cứ lúc nào</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quy-trinh" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Quy trình</span>
+          <h2>Bạn chỉ cần <span class="it">gửi ảnh và bảng giá</span></h2>
+        </div>
+        <div class="grid process">
+          <div class="card reveal"><div class="day">Ngày 1</div><h3>Trao đổi</h3><p class="muted">Chọn mẫu, gửi logo, ảnh tiệm, bảng giá qua Zalo.</p></div>
+          <div class="card reveal"><div class="day">Ngày 2–5</div><h3>Thiết kế & làm web</h3><p class="muted">Gửi link xem thử trên điện thoại của bạn.</p></div>
+          <div class="card reveal"><div class="day">Ngày 6</div><h3>Chỉnh sửa</h3><p class="muted">Sửa tối đa 2 lần theo góp ý.</p></div>
+          <div class="card reveal"><div class="day">Ngày 7</div><h3>Lên mạng</h3><p class="muted">Gắn tên miền, đăng ký Google, bàn giao toàn bộ.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="eyebrow">Câu hỏi thường gặp</span><h2>Chủ tiệm hay hỏi</h2></div>
+        <div class="reveal">
+          <details><summary>Có phải trả phí hằng tháng không?</summary><p>Không bắt buộc. Web được đặt trên hosting miễn phí, bạn chỉ trả tiền tên miền mỗi năm. Gói chăm sóc 400k/tháng là tùy chọn.</p></details>
+          <details><summary>Tôi không rành máy tính, có tự sửa được không?</summary><p>Bạn nhắn nội dung cần đổi qua Zalo là được. Gói nâng cao có trang quản lý để tự sửa giá và ảnh.</p></details>
+          <details><summary>Web có lên Google không?</summary><p>Có. Web được tối ưu SEO cơ bản và gắn với hồ sơ Google Maps của tiệm để khách tìm thấy dễ hơn.</p></details>
+          <details><summary>Nếu không ưng thì sao?</summary><p>Bạn xem bản thử trước khi trả 50% còn lại. Không ưng sau 2 lần sửa thì dừng, không mất thêm.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta reveal">
+          <div><h2 style="margin:0">Tiệm của bạn đáng có một website <span class="it">đẹp như vậy.</span></h2></div>
+          <div class="btn-row"><a class="btn btn-primary" href="#" data-zalo>Nhắn Zalo báo giá</a><a class="btn btn-ghost" href="#" data-call>Gọi ngay</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div><strong>Web cho tiệm</strong><br>Thiết kế website cho tiệm nhỏ · Zalo: 0946 611 993</div>
+      <div>© <span data-year></span></div>
+    </div>
+  </footer>
+
+  <div class="contact-bar"><a href="#" data-call>Gọi</a><a href="#" data-zalo>Nhắn Zalo</a></div>
+  <script src="assets/main.js" defer></script>
+</body>
+</html>

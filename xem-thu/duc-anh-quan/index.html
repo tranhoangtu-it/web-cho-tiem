@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đức Anh Quán — Vietnamese Kitchen · Berlin Lichtenberg</title>
+  <meta name="description" content="Đức Anh Quán at Dong Xuan Center, Berlin: Authentic Phở, Bún Chả & Vietnamese dishes. Bilingual menu & table booking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Playfair+Display:ital,wght@0,600;1,500&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/base.css">
+  <style>
+    :root {
+      --bg: #fbf6ee; --surface: #fff; --ink: #1c1712; --muted: #6f6457; --line: #eadfce;
+      --accent: #c2410c; --accent-ink: #fff; --accent-soft: #fbe3d3; --broth: #e9a23b; --herb: #3f6b3a;
+    }
+    /* Show only the active language. Text pairs are <span lang="en"> / <span lang="vi">. */
+    html[data-lang="en"] [lang="vi"]:not(html), html[data-lang="vi"] [lang="en"]:not(html) { display: none !important; }
+    h1 em, h2 em { font-style: italic; color: var(--accent); }
+    .lang-switch { display: inline-flex; border: 1.5px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface); }
+    .lang-switch button { border: 0; background: transparent; font: 700 .8rem/1 var(--font-body); padding: 8px 12px; border-radius: 999px; cursor: pointer; color: var(--muted); }
+    .lang-switch button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+    .header-tools { display: flex; align-items: center; gap: 10px; }
+    .hero { padding-block: clamp(36px, 7vw, 96px); }
+    .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+    .bowl { position: relative; aspect-ratio: 1; max-width: 440px; width: 100%; justify-self: center; }
+    .bowl .rim { position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle, #f3e3c6 0 55%, #fff 56% 62%, var(--ink) 63% 70%, #fff 71%); box-shadow: 0 40px 70px -40px rgba(28,23,18,.6); }
+    .bowl .broth { position: absolute; inset: 14%; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #f6c46a, var(--broth) 60%, #b86f1c); }
+    .bowl .herb { position: absolute; width: 16%; aspect-ratio: 1; border-radius: 50% 0; background: var(--herb); }
+    .bowl .h1 { top: 30%; left: 34%; transform: rotate(20deg); }
+    .bowl .h2 { top: 48%; left: 56%; transform: rotate(-35deg); }
+    .bowl .h3 { top: 58%; left: 30%; transform: rotate(80deg); width: 12%; }
+    .bowl .lime { position: absolute; width: 20%; aspect-ratio: 1; border-radius: 50%; top: 22%; right: 22%; background: radial-gradient(circle, #e8f5a3 0 55%, #9cc43a 56%); }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .badge-row span { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: .85rem; font-weight: 600; }
+    .menu { background: var(--ink); color: #f6efe4; }
+    .menu .eyebrow { color: var(--broth); }
+    .menu .muted, .menu .price-list .name small { color: #b9ab98; }
+    .menu .price-list li { border-color: #3a3128; }
+    .menu .price-list .price { color: var(--broth); }
+    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(32px, 5vw, 72px); }
+    .menu-grid h3 { font-family: var(--font-body); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: .95rem; color: #fff; border-bottom: 2px solid #f6efe4; padding-bottom: 10px; }
+    .visit .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+    .hours { list-style: none; padding: 0; margin: 20px 0 24px; }
+    .hours li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+    .reviews { grid-template-columns: repeat(3, 1fr); }
+    .stars { color: var(--broth); letter-spacing: 2px; }
+    @media (max-width: 860px) {
+      .hero .wrap, .visit .wrap, .menu-grid { grid-template-columns: 1fr; }
+      .reviews { grid-template-columns: 1fr; }
+      .bowl { max-width: 320px; }
+    }
+  </style>
+</head>
+<body data-phone="0946611993" data-business="Đức Anh Quán">
+  <a class="skip" href="#main"><span lang="en">Skip to content</span><span lang="vi">Bỏ qua tới nội dung</span></a>
+  <div class="demo-ribbon">✨ Giao diện dựng thử riêng cho <strong>Đức Anh Quán</strong> — Ưng ý mới thanh toán · <a href="https://zalo.me/0946611993" target="_blank" rel="noopener">Nhận bàn giao hoặc Zalo 0946611993</a></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#">Đức Anh Quán</a>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-set-lang="vi" aria-pressed="false">VI</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" data-nav-toggle>☰</button>
+        <nav class="nav" data-nav aria-label="Main">
+          <a href="#menu"><span lang="en">Menu</span><span lang="vi">Thực đơn</span></a>
+          <a href="#reviews"><span lang="en">Reviews</span><span lang="vi">Đánh giá</span></a>
+          <a href="#visit"><span lang="en">Hours & location</span><span lang="vi">Giờ & địa chỉ</span></a>
+          <a class="btn btn-primary" href="#visit"><span lang="en">Book a table</span><span lang="vi">Đặt bàn</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow"><span lang="en">Vietnamese Restaurant · Dong Xuan Center, Berlin</span><span lang="vi">Nhà hàng Việt · Dong Xuan Center, Berlin</span></span>
+          <h1><span lang="en">Authentic <em>Vietnamese</em> flavours in Berlin.</span><span lang="vi">Hương vị <em>Việt Nam</em> chuẩn vị giữa lòng Berlin.</span></h1>
+          <p class="lead"><span lang="en">Loved by 500+ guests in Berlin-Lichtenberg. Traditional Phở, crispy spring rolls and rice plates — fresh daily.</span><span lang="vi">Được hơn 500 thực khách tại Berlin-Lichtenberg yêu thích. Phở truyền thống, nem rán và cơm Việt nấu mới mỗi ngày.</span></p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#menu"><span lang="en">See the menu</span><span lang="vi">Xem thực đơn</span></a>
+            <a class="btn btn-ghost" href="#" data-call><span lang="en">Call to order</span><span lang="vi">Gọi đặt món</span></a>
+          </div>
+          <div class="badge-row">
+            <span>★ 4.0 · 500+ Google reviews</span>
+            <span lang="en">Gluten-free options</span><span lang="vi">Có món không gluten</span>
+            <span lang="en">Open 7 days</span><span lang="vi">Mở cửa cả tuần</span>
+          </div>
+        </div>
+        <div class="bowl reveal" aria-hidden="true"><div class="rim"></div><div class="broth"></div><div class="herb h1"></div><div class="herb h2"></div><div class="herb h3"></div><div class="lime"></div></div>
+      </div>
+    </section>
+
+    <section class="section menu" id="menu">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span lang="en">Menu</span><span lang="vi">Thực đơn</span></span>
+          <h2 style="color:#fff"><span lang="en">Our <em>favourites</em></span><span lang="vi">Món <em>được yêu thích</em></span></h2>
+          <p class="muted"><span lang="en">Large bowl +$3. Ask us about vegetarian broth.</span><span lang="vi">Tô lớn thêm $3. Có nước dùng chay, hỏi nhân viên nhé.</span></p>
+        </div>
+        <div class="menu-grid">
+          <div class="reveal">
+            <h3><span lang="en">Phở & noodles</span><span lang="vi">Phở & bún</span></h3>
+            <ul class="price-list">
+              <li><span class="name">Phở Đặc Biệt<small lang="en">Special beef — rare steak, brisket, tendon, meatballs</small><small lang="vi">Phở đặc biệt — tái, nạm, gân, bò viên</small></span><span class="dots"></span><span class="price">$19.5</span></li>
+              <li><span class="name">Phở Tái<small lang="en">Rare beef, thinly sliced</small><small lang="vi">Phở bò tái</small></span><span class="dots"></span><span class="price">$17.5</span></li>
+              <li><span class="name">Phở Gà<small lang="en">Free-range chicken, ginger broth</small><small lang="vi">Phở gà ta, nước dùng gừng</small></span><span class="dots"></span><span class="price">$17.0</span></li>
+              <li><span class="name">Bún Bò Huế<small lang="en">Spicy lemongrass beef noodle soup</small><small lang="vi">Bún bò Huế cay sả</small></span><span class="dots"></span><span class="price">$19.0</span></li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3><span lang="en">Bánh mì & sides</span><span lang="vi">Bánh mì & món phụ</span></h3>
+            <ul class="price-list">
+              <li><span class="name">Bánh Mì Thịt<small lang="en">Pork roll, pâté, pickles, coriander</small><small lang="vi">Bánh mì thịt, pa-tê, đồ chua, ngò</small></span><span class="dots"></span><span class="price">$9.5</span></li>
+              <li><span class="name">Gỏi Cuốn<small lang="en">Fresh prawn rolls (3) with peanut sauce</small><small lang="vi">Gỏi cuốn tôm (3 cuốn), sốt đậu phộng</small></span><span class="dots"></span><span class="price">$10.0</span></li>
+              <li><span class="name">Chả Giò<small lang="en">Crispy spring rolls (4)</small><small lang="vi">Chả giò chiên (4 cuốn)</small></span><span class="dots"></span><span class="price">$9.0</span></li>
+              <li><span class="name">Cà Phê Sữa Đá<small lang="en">Vietnamese iced coffee</small><small lang="vi">Cà phê sữa đá phin</small></span><span class="dots"></span><span class="price">$6.5</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span lang="en">Reviews</span><span lang="vi">Đánh giá</span></span>
+          <h2><span lang="en">What our <em>regulars</em> say</span><span lang="vi">Khách quen <em>nói gì</em></span></h2>
+        </div>
+        <div class="grid reviews">
+          <blockquote class="card quote reveal"><div class="stars">★★★★★</div><p>“The best phở broth in Sydney. Clean, deep and not too salty.”</p><footer>Sarah K. · Google</footer></blockquote>
+          <blockquote class="card quote reveal"><div class="stars">★★★★★</div><p>“Ăn ở đây như về nhà. Bún bò chuẩn vị Huế.”</p><footer>Anh Tuấn · Facebook</footer></blockquote>
+          <blockquote class="card quote reveal"><div class="stars">★★★★★</div><p>“Huge bowls, fast service, friendly family. Our Sunday ritual.”</p><footer>James &amp; Mia · Google</footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit" id="visit" style="padding-top:0">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow"><span lang="en">Visit us</span><span lang="vi">Ghé quán</span></span>
+          <h2><span lang="en">Hours & <em>location</em></span><span lang="vi">Giờ mở cửa & <em>địa chỉ</em></span></h2>
+          <ul class="hours">
+            <li><span lang="en">Mon – Fri</span><span lang="vi">Thứ 2 – Thứ 6</span><b>9:00 – 21:00</b></li>
+            <li><span lang="en">Sat – Sun</span><span lang="vi">Thứ 7 – Chủ nhật</span><b>8:00 – 21:30</b></li>
+            <li><span lang="en">Address</span><span lang="vi">Địa chỉ</span><b>Dong Xuan Center, Lichtenberg, Berlin</b></li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#" data-call><span lang="en">Call us</span><span lang="vi">Gọi quán</span></a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Duc+Anh+Quan+Dong+Xuan+Center+Berlin" target="_blank" rel="noopener"><span lang="en">Get directions</span><span lang="vi">Chỉ đường</span></a>
+          </div>
+        </div>
+        <form class="form card reveal" data-booking novalidate>
+          <h3 style="margin:0"><span lang="en">Book a table</span><span lang="vi">Đặt bàn</span></h3>
+          <div class="form-row">
+            <div class="field"><label for="name"><span lang="en">Name</span><span lang="vi">Họ tên</span></label><input id="name" name="name" data-label="Name / Tên" autocomplete="name" required></div>
+            <div class="field"><label for="phone"><span lang="en">Phone</span><span lang="vi">Số điện thoại</span></label><input id="phone" name="phone" data-label="Phone / SĐT" inputmode="tel" autocomplete="tel" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="people"><span lang="en">Guests</span><span lang="vi">Số người</span></label><input id="people" name="people" data-label="Guests / Số người" type="number" min="1" max="30" value="2"></div>
+            <div class="field"><label for="date"><span lang="en">Date</span><span lang="vi">Ngày</span></label><input id="date" name="date" data-label="Date / Ngày" type="date"></div>
+            <div class="field"><label for="time"><span lang="en">Time</span><span lang="vi">Giờ</span></label><input id="time" name="time" data-label="Time / Giờ" type="time"></div>
+          </div>
+          <div class="field"><label for="note"><span lang="en">Notes</span><span lang="vi">Ghi chú</span></label><textarea id="note" name="note" data-label="Notes / Ghi chú" rows="3"></textarea></div>
+          <button class="btn btn-primary" type="submit"><span lang="en">Send booking</span><span lang="vi">Gửi đặt bàn</span></button>
+          <p class="form-status" data-status role="status" aria-live="polite"></p>
+          <pre class="form-fallback" data-fallback hidden></pre>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div><strong>Đức Anh Quán</strong><br>Dong Xuan Center, Lichtenberg, Berlin</div>
+      <div>© <span data-year></span> Đức Anh Quán. <span lang="en">Personalized preview.</span><span lang="vi">Bản dựng thử riêng.</span></div>
+    </div>
+  </footer>
+
+  <div class="contact-bar"><a href="#" data-call><span lang="en">Call</span><span lang="vi">Gọi</span></a><a href="#visit"><span lang="en">Book</span><span lang="vi">Đặt bàn</span></a></div>
+
+  <script>
+    // Language switch: saved choice first, then browser language, else English.
+    (() => {
+      const root = document.documentElement;
+      const buttons = document.querySelectorAll("[data-set-lang]");
+      const apply = (lang) => {
+        root.dataset.lang = lang;
+        root.lang = lang;
+        buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.setLang === lang)));
+        try { localStorage.setItem("lang", lang); } catch { /* storage blocked: choice just isn't remembered */ }
+      };
+      let saved = null;
+      try { saved = localStorage.getItem("lang"); } catch { saved = null; }
+      const browserIsVietnamese = (navigator.language || "").toLowerCase().startsWith("vi");
+      apply(saved === "en" || saved === "vi" ? saved : browserIsVietnamese ? "vi" : "en");
+      buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.setLang)));
+    })();
+  </script>
+  <script src="../../assets/main.js" defer></script>
+</body>
+</html>
